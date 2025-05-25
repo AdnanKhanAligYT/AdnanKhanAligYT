@@ -1,82 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Class 9 - AdnanKhanAligYT</title>
+  <meta charset="UTF-8">
+  <title>AdnanKhanAligYT - Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(#ffe6f0, #ffffff);
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #ffb6c1;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .header img {
+      width: 100px;
+      border-radius: 50px;
+      border: 3px solid white;
+      opacity: 0;
+      transform: scale(0.8) translateY(-20px);
+      animation: logoZoom 0.8s forwards ease-out;
+    }
+
+    @keyframes logoZoom {
+      to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .header h1 {
+      color: #fff;
+      margin: 10px 0 0;
+    }
+
+    .header p {
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .class-links {
+      max-width: 800px;
+      margin: 40px auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .class-links a {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlideIn 0.6s forwards;
+      animation-delay: calc(var(--i) * 0.15s);
+
+      text-decoration: none;
+      background-color: #f8c8dc;
+      padding: 12px 24px;
+      border-radius: 30px;
+      display: inline-block;
+      color: #880e4f;
+      font-size: 18px;
+      font-weight: bold;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+
+    .class-links a:hover {
+      background-color: #ffc0d9;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeSlideIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 12px 0;
+      background-color: #ffccda;
+      color: #6d214f;
+      font-weight: 500;
+      margin-top: 50px;
+    }
+
+    @media (min-width: 768px) {
+      .class-links {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .class-links a {
+        width: 200px;
+      }
+    }
+  </style>
 </head>
-<body style="margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; background: linear-gradient(to bottom right, #fce4ec, #e3f2fd);">
+<body>
 
-    <!-- Header -->
-    <div style="background-color: #f06292; padding: 30px 0; text-align: center; color: white; box-shadow: 0 6px 18px rgba(0,0,0,0.2); border-bottom-left-radius: 50px; border-bottom-right-radius: 50px;">
-        <h1 style="margin: 0; font-size: 38px;">Class 9 Resources</h1>
-        <p style="font-size: 18px; margin-top: 8px;">By Adnan Sir (SMPS)</p>
-    </div>
+  <div class="header">
+    <img src="images/smps-logo.jpg" alt="SMPS Logo">
+    <h1>Adnan Sir (SMPS)</h1>
+    <p>Welcome to AdnanKhanAligYT</p>
+  </div>
 
-    <!-- Card Container -->
-    <div style="display: flex; justify-content: center; flex-wrap: wrap; margin: 60px auto; gap: 40px; max-width: 1000px; padding: 0 20px;">
+  <div class="class-links">
+    <a href="al-hamrah/index.html" style="color: red;" style="--i:0;">Al-Hamrah</a>
+    <a href="class6/index.html" style="--i:1;">Class 6th</a>
+    <a href="class7/index.html" style="--i:2;">Class 7th</a>
+    <a href="class8/index.html" style="--i:3;">Class 8th</a>
+    <a href="class9/index.html" style="--i:4;">Class 9th</a>
+    <a href="class10/index.html" style="--i:5;">Class 10th</a>
+    <a href="class11/index.html" style="--i:6;">Class 11th</a>
+    <a href="class12/index.html" style="--i:7;">Class 12th</a>
+  </div>
 
-        <!-- NCERT Book -->
-        <a href="ncert-book.html" style="
-            width: 220px;
-            height: 140px;
-            background: white;
-            border-radius: 25px;
-            text-decoration: none;
-            color: #c2185b;
-            font-size: 20px;
-            font-weight: bold;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.25s ease, background-color 0.3s ease;
-        " onmouseover="this.style.transform='scale(1.08)'; this.style.backgroundColor='#f8bbd0'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='white'">
-            NCERT Book
-        </a>
-
-        <!-- Notes -->
-        <a href="#" style="
-            width: 220px;
-            height: 140px;
-            background: white;
-            border-radius: 25px;
-            text-decoration: none;
-            color: #6a1b9a;
-            font-size: 20px;
-            font-weight: bold;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.25s ease, background-color 0.3s ease;
-        " onmouseover="this.style.transform='scale(1.08)'; this.style.backgroundColor='#e1bee7'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='white'">
-            Notes
-        </a>
-
-        <!-- Others -->
-        <a href="#" style="
-            width: 220px;
-            height: 140px;
-            background: white;
-            border-radius: 25px;
-            text-decoration: none;
-            color: #1565c0;
-            font-size: 20px;
-            font-weight: bold;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: transform 0.25s ease, background-color 0.3s ease;
-        " onmouseover="this.style.transform='scale(1.08)'; this.style.backgroundColor='#bbdefb'" onmouseout="this.style.transform='scale(1)'; this.style.backgroundColor='white'">
-            Others
-        </a>
-    </div>
-
-    <!-- Footer -->
-    <div style="text-align: center; padding: 15px 0; background-color: #f8bbd0; color: #6d214f; border-top-left-radius: 40px; border-top-right-radius: 40px; margin-top: 80px;">
-        © 2025 AdnanKhanAligYT | Class 9 Section
-    </div>
+  <footer>
+    © 2025 AdnanKhanAligYT | Designed with love by Adnan Sir
+  </footer>
 
 </body>
 </html>
